@@ -1,7 +1,4 @@
 
-[view on live site](https://support.signalfx.com/hc/en-us/articles/203833079-SignalFx-a-step-by-step-guide)
-
-[view on Confluence (links work)](https://signalfuse.atlassian.net/wiki/display/docstestbed/SignalFx+Quick+Start)
 
 links to be implemented
 

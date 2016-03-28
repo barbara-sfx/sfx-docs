@@ -1,3 +1,3 @@
 # Welcome to SignalFx
 
-Use tabs at top to view different sample docs.
+Use tabs in sidebar to view different sample docs.
