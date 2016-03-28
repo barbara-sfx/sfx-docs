@@ -1,5 +1,4 @@
 
-[view on live site](https://support.signalfx.com/hc/en-us/articles/204457925-Why-metrics-]
 
  **Links may not work**
 
