@@ -1,0 +1,134 @@
+{
+    "docs": [
+        {
+            "location": "/",
+            "text": "Welcome to SignalFx\n\n\nUse tabs at top to view different sample docs.",
+            "title": "Home"
+        },
+        {
+            "location": "/#welcome-to-signalfx",
+            "text": "Use tabs at top to view different sample docs.",
+            "title": "Welcome to SignalFx"
+        },
+        {
+            "location": "/why-metrics/",
+            "text": "[view on live site](https://support.signalfx.com/hc/en-us/articles/204457925-Why-metrics-]\n\n\nLinks may not work\n\n\nIntroduction\n\n\nSignalFx is all about metrics - collecting, storing, visualizing, analyzing and alerting on them. If you're wondering why you should care, or just want to get a better feel for what they are - read on!\n\n\nOriginal has a TOC to the headings in the document here, which I haven't recreated\n\n\nWhat is a metric?\n\n\nA metric is anything that is\u00a0\nmeasurable\n\u00a0(you can assign a numerical value to it) and\u00a0\nvariable\n\u00a0(changes over time).\n\n\nFor example, the current temperature or the price of a stock are examples of measurable things, as their numerical value changes over time. Things that have non-numerical values, such as a person's name, are not metrics because they cannot be measured. Likewise, numerical constants such as\u00a0\npi\n\u00a0(3.1415\u2026.) or the speed of light are always the same, so they are not metrics either.\n\n\nCommon examples of metrics\n\n\nMany things can be represented as metrics. For the purposes of monitoring, we loosely categorize them as infrastructure, application or business metrics.\n\n\nInfrastructure metrics examples:\n\n\n\n\nCPU% of a server\n\n\nnumber of bytes of free disk space\n\n\nnumber of bytes transmitted on a network interface\n\n\n\n\nApplication metrics examples:\n\n\n\n\nResponse time in milliseconds of an API call\n\n\nCache hit ratio of an internal cache used in a service\n\n\n% of time spent on garbage collection by a JVM instance\n\n\n\n\nBusiness metrics examples:\n\n\n\n\nnumber of unique users who logged in over the last day\n\n\nnumber of new customers who signed up in the last hour\n\n\nWeek over week percentage growth in revenue\n\n\n\n\nMetrics and logs\n\n\nLogs are lists of actions or events that have occurred, and are commonly used by developers and operations teams for troubleshooting because of the ease with which detailed log data can be generated, and because it is often human-readable. In many cases, metrics are implicitly written into logs as part of an accounting of events.\n\n\nFor example, you might have a log containing the stack trace every time an exception occurs in a Java application. If you extract the text that represents the occurrence of an exception, tally up the number of times you see it in the log and correlate that with timestamps correctly, then effectively you have recreated a metric representing the number of exceptions.\n\n\nIn this sense, the log file can be thought of as a temporary container for the metric data, trading off detail and human readability (it's just text, after all) against efficiency of transport and ease of subsequent mathematical manipulation (as you would expect for numbers).\n\n\nWhy are metrics useful?\n\n\nBy their very nature, metrics lend themselves to visualization, analytics and alerting.\n\n\nVisualization\n\n\nThe human brain is particularly good at visual pattern analysis. A page full of time/value pairs may feel like a jumble, but if you plot them on a chart, you will instantly make sense of the data. Trends and outliers become apparent right away, as does proportionality.\n\n\nAnalytics\n\n\nCalculating aggregations (e.g. percentiles over a large population), discovering trends (e.g. percentage rise in daily revenue compared to a month ago) and finding correlations (e.g. between growth in API calls and number of logged-in users on a website) are all examples of analytics for which metrics are well-suited.\n\n\nAlerting\n\n\nIt is trivial to compare a metric against a threshold value and send out a notification when it crosses the threshold.\n\n\nHow are metrics used by developers or operations teams?\n\n\nMonitoring, scaling and optimization are three key use cases enabled by metrics. For any business with software competencies - and that is most companies, today - satisfying these use cases is also critical to the success of the business.\n\n\nMonitoring\n\n\nIn its simplest form, monitoring uses the visualization and alerting capabilities of metrics to let you manage individual instances or components, such as the CPU utilization % of a specific server. In an environment with greater complexity, monitoring is no longer just a visualization and alerting problem, but is now also an analytics problem. For example, in a service with tens or hundreds of nodes, it is inefficient and noisy to monitor the health of individual nodes, each of which can generate their own alerts. \u00a0It is far better to monitor the overall health of the service by calculating a single metric of overall service performance, and receiving a single alert when the service is performing below expected service levels.\n\n\nScaling\n\n\nHow much headroom does a node have? How much capacity should be added across the multiple tiers of a distributed application architecture - running on cloud infrastructure, of course - in order to support X more users of a service? While it's possible to build static models to plan for such changes, the reality is that the characteristics of the application components are changing constantly. As a result, static models become obsolete rapidly, and models that capture the dynamic nature of performance - in other words, metrics - are really the only way to accurately anticipate scaling requirements.\n\n\nOptimization\n\n\nPerformance and cost optimization are among the top two or three focus areas of most engineering organizations. Comparison of performance metrics with their historical values helps measure the effectiveness of optimizations or identify performance regressions introduced by new code. With any reasonably complex system, instrumenting each component or service to capture important performance characteristics (e.g. latency of each stage) helps identify the longest poles and the best targets for engineering effort. Similarly, mapping out how costs will increase with scale can help identify and address top cost centers within a service.\n\n\nServing business needs\n\n\nFor any business with a software competency, all of the above reasons to use metrics apply not just to the developer community and the operations teams, but also to their business counterparts. 24/7 expectations on the part of customers mean that monitoring has to be up to snuff. Scale tends to correlate with revenue and user growth in most software businesses. Performance is not just a matter of engineering prioritization, but also critical to customer satisfaction and retention.\n\n\nWhen should I use metrics? When should I use logs?\n\n\nWhile logs and metrics can be used in similar ways, they tend to have complementary strengths, leading many practitioners to use both.\n\n\n!https://support.signalfx.com/hc/en-us/article_attachments/201806159/table1.png!\n\n\nIn fact, while SignalFx primarily handles metrics, it also supports\u00a0\nevent\n\u00a0data natively in SignalFx.",
+            "title": "Metrics"
+        },
+        {
+            "location": "/why-metrics/#introduction",
+            "text": "SignalFx is all about metrics - collecting, storing, visualizing, analyzing and alerting on them. If you're wondering why you should care, or just want to get a better feel for what they are - read on!  Original has a TOC to the headings in the document here, which I haven't recreated",
+            "title": "Introduction"
+        },
+        {
+            "location": "/why-metrics/#what-is-a-metric",
+            "text": "A metric is anything that is\u00a0 measurable \u00a0(you can assign a numerical value to it) and\u00a0 variable \u00a0(changes over time).  For example, the current temperature or the price of a stock are examples of measurable things, as their numerical value changes over time. Things that have non-numerical values, such as a person's name, are not metrics because they cannot be measured. Likewise, numerical constants such as\u00a0 pi \u00a0(3.1415\u2026.) or the speed of light are always the same, so they are not metrics either.",
+            "title": "What is a metric?"
+        },
+        {
+            "location": "/why-metrics/#common-examples-of-metrics",
+            "text": "Many things can be represented as metrics. For the purposes of monitoring, we loosely categorize them as infrastructure, application or business metrics.",
+            "title": "Common examples of metrics"
+        },
+        {
+            "location": "/why-metrics/#infrastructure-metrics-examples",
+            "text": "CPU% of a server  number of bytes of free disk space  number of bytes transmitted on a network interface",
+            "title": "Infrastructure metrics examples:"
+        },
+        {
+            "location": "/why-metrics/#application-metrics-examples",
+            "text": "Response time in milliseconds of an API call  Cache hit ratio of an internal cache used in a service  % of time spent on garbage collection by a JVM instance",
+            "title": "Application metrics examples:"
+        },
+        {
+            "location": "/why-metrics/#business-metrics-examples",
+            "text": "number of unique users who logged in over the last day  number of new customers who signed up in the last hour  Week over week percentage growth in revenue",
+            "title": "Business metrics examples:"
+        },
+        {
+            "location": "/why-metrics/#metrics-and-logs",
+            "text": "Logs are lists of actions or events that have occurred, and are commonly used by developers and operations teams for troubleshooting because of the ease with which detailed log data can be generated, and because it is often human-readable. In many cases, metrics are implicitly written into logs as part of an accounting of events.  For example, you might have a log containing the stack trace every time an exception occurs in a Java application. If you extract the text that represents the occurrence of an exception, tally up the number of times you see it in the log and correlate that with timestamps correctly, then effectively you have recreated a metric representing the number of exceptions.  In this sense, the log file can be thought of as a temporary container for the metric data, trading off detail and human readability (it's just text, after all) against efficiency of transport and ease of subsequent mathematical manipulation (as you would expect for numbers).",
+            "title": "Metrics and logs"
+        },
+        {
+            "location": "/why-metrics/#why-are-metrics-useful",
+            "text": "By their very nature, metrics lend themselves to visualization, analytics and alerting.",
+            "title": "Why are metrics useful?"
+        },
+        {
+            "location": "/why-metrics/#visualization",
+            "text": "The human brain is particularly good at visual pattern analysis. A page full of time/value pairs may feel like a jumble, but if you plot them on a chart, you will instantly make sense of the data. Trends and outliers become apparent right away, as does proportionality.",
+            "title": "Visualization"
+        },
+        {
+            "location": "/why-metrics/#analytics",
+            "text": "Calculating aggregations (e.g. percentiles over a large population), discovering trends (e.g. percentage rise in daily revenue compared to a month ago) and finding correlations (e.g. between growth in API calls and number of logged-in users on a website) are all examples of analytics for which metrics are well-suited.",
+            "title": "Analytics"
+        },
+        {
+            "location": "/why-metrics/#alerting",
+            "text": "It is trivial to compare a metric against a threshold value and send out a notification when it crosses the threshold.",
+            "title": "Alerting"
+        },
+        {
+            "location": "/why-metrics/#how-are-metrics-used-by-developers-or-operations-teams",
+            "text": "Monitoring, scaling and optimization are three key use cases enabled by metrics. For any business with software competencies - and that is most companies, today - satisfying these use cases is also critical to the success of the business.",
+            "title": "How are metrics used by developers or operations teams?"
+        },
+        {
+            "location": "/why-metrics/#monitoring",
+            "text": "In its simplest form, monitoring uses the visualization and alerting capabilities of metrics to let you manage individual instances or components, such as the CPU utilization % of a specific server. In an environment with greater complexity, monitoring is no longer just a visualization and alerting problem, but is now also an analytics problem. For example, in a service with tens or hundreds of nodes, it is inefficient and noisy to monitor the health of individual nodes, each of which can generate their own alerts. \u00a0It is far better to monitor the overall health of the service by calculating a single metric of overall service performance, and receiving a single alert when the service is performing below expected service levels.",
+            "title": "Monitoring"
+        },
+        {
+            "location": "/why-metrics/#scaling",
+            "text": "How much headroom does a node have? How much capacity should be added across the multiple tiers of a distributed application architecture - running on cloud infrastructure, of course - in order to support X more users of a service? While it's possible to build static models to plan for such changes, the reality is that the characteristics of the application components are changing constantly. As a result, static models become obsolete rapidly, and models that capture the dynamic nature of performance - in other words, metrics - are really the only way to accurately anticipate scaling requirements.",
+            "title": "Scaling"
+        },
+        {
+            "location": "/why-metrics/#optimization",
+            "text": "Performance and cost optimization are among the top two or three focus areas of most engineering organizations. Comparison of performance metrics with their historical values helps measure the effectiveness of optimizations or identify performance regressions introduced by new code. With any reasonably complex system, instrumenting each component or service to capture important performance characteristics (e.g. latency of each stage) helps identify the longest poles and the best targets for engineering effort. Similarly, mapping out how costs will increase with scale can help identify and address top cost centers within a service.",
+            "title": "Optimization"
+        },
+        {
+            "location": "/why-metrics/#serving-business-needs",
+            "text": "For any business with a software competency, all of the above reasons to use metrics apply not just to the developer community and the operations teams, but also to their business counterparts. 24/7 expectations on the part of customers mean that monitoring has to be up to snuff. Scale tends to correlate with revenue and user growth in most software businesses. Performance is not just a matter of engineering prioritization, but also critical to customer satisfaction and retention.",
+            "title": "Serving business needs"
+        },
+        {
+            "location": "/why-metrics/#when-should-i-use-metrics-when-should-i-use-logs",
+            "text": "While logs and metrics can be used in similar ways, they tend to have complementary strengths, leading many practitioners to use both.  !https://support.signalfx.com/hc/en-us/article_attachments/201806159/table1.png!  In fact, while SignalFx primarily handles metrics, it also supports\u00a0 event \u00a0data natively in SignalFx.",
+            "title": "When should I use metrics? When should I use logs?"
+        },
+        {
+            "location": "/quick-start-old/",
+            "text": "view on live site\n\n\nview on Confluence (links work)\n\n\nlinks to be implemented\n\n\nSign up or sign in\n\n\n\n\n\n\nIf\u00a0your team already has an account, ask your\u00a0admin for an invitation, then\u00a0\nsign in\n.\n\n\n\n\n\n\nOtherwise, go to the\u00a0\nSignalFx website\n\u00a0and\u00a0sign up for our free trial.\n\n\n\n\n\n\nSend in metrics\n\n\n\n\n\n\nIf you are already familiar with metrics and just want to know how to configure your existing collectors to send data to SignalFx, check out\u00a0\nour documentation on sending metrics\n.\n\n\n\n\n\n\nIf you have instances on AWS (or can get them easily), then\u00a0\nintegrate with Amazon Web Services\n\u00a0to pull in CloudWatch metrics.\n\n\n\n\n\n\nYou can also\u00a0\ninstall our streamlined default configuration\n\u00a0of the popular open source agent, collectd.\n\n\n\n\n\n\nFinally, you can send in \ncustom application metrics\n or use our\u00a0\nAPI\n.\n\n\n\n\n\n\nCreate a chart or two\n\n\n\n\nOnce you have metrics flowing into SignalFx, it's time to\u00a0\ncreate your first chart\n.\n\n\nIf you'd like to understand how our SignalFlow analytics work, create your\u00a0\ncreate your first analytics pipeline\n.\n\n\n\n\nGo deep on monitoring and analytics\n\n\n\n\nInvite your teammates\n\u00a0to join you. Build dashboards that help you understand how your services and systems affect one another. Work together better across teams.\n\n\nSend in metrics that matter to your application, your infrastructure and your business. Explore the\u00a0\ndifferent ways\n\u00a0you can do this and make sure you're\u00a0\nchoosing the best metric types\n\u00a0for your data.\n\n\nUnderstand how the parts of the SignalFx application work together to let you create and manage charts, by reading up on\u00a0\ncharts\n,\u00a0\ndashboards and dashboard groups\n, and the\u00a0\nCatalog\n.\n\n\nSet up\u00a0\ndetectors and alerts\n\u00a0on your most important metrics so that you can be notified if anything goes wrong.\n\n\nGo deep on\u00a0\nhow the SignalFlow analytics engine works\n\u00a0and what\u00a0\nfunctions\n\u00a0it makes available. Add\u00a0\nmetadata\n\u00a0to your metrics to get the most out of our visualization and analytics.\n\n\nDig into our best practices around\u00a0\nhow to monitor elastic infrastructure\n\u00a0like AWS, and come up with some of your own.\n\n\n\n\nBecome an active member of our community\n\n\n\n\n\n\nGot a story to share? Best practices that would benefit others on how to make the best use of analytics in monitoring?\u00a0\nGet in touch with us\n\n\n\n\n\n\nContribute to our\u00a0\nopen source collector efforts on GitHub\n\u00a0and help others collect, aggregate and send the metrics and events they need. While you're there, check out the exciting proijects in our other repos.",
+            "title": "Quick Start Old"
+        },
+        {
+            "location": "/quick-start-old/#sign-up-or-sign-in",
+            "text": "If\u00a0your team already has an account, ask your\u00a0admin for an invitation, then\u00a0 sign in .    Otherwise, go to the\u00a0 SignalFx website \u00a0and\u00a0sign up for our free trial.",
+            "title": "Sign up or sign in"
+        },
+        {
+            "location": "/quick-start-old/#send-in-metrics",
+            "text": "If you are already familiar with metrics and just want to know how to configure your existing collectors to send data to SignalFx, check out\u00a0 our documentation on sending metrics .    If you have instances on AWS (or can get them easily), then\u00a0 integrate with Amazon Web Services \u00a0to pull in CloudWatch metrics.    You can also\u00a0 install our streamlined default configuration \u00a0of the popular open source agent, collectd.    Finally, you can send in  custom application metrics  or use our\u00a0 API .",
+            "title": "Send in metrics"
+        },
+        {
+            "location": "/quick-start-old/#create-a-chart-or-two",
+            "text": "Once you have metrics flowing into SignalFx, it's time to\u00a0 create your first chart .  If you'd like to understand how our SignalFlow analytics work, create your\u00a0 create your first analytics pipeline .",
+            "title": "Create a chart or two"
+        },
+        {
+            "location": "/quick-start-old/#go-deep-on-monitoring-and-analytics",
+            "text": "Invite your teammates \u00a0to join you. Build dashboards that help you understand how your services and systems affect one another. Work together better across teams.  Send in metrics that matter to your application, your infrastructure and your business. Explore the\u00a0 different ways \u00a0you can do this and make sure you're\u00a0 choosing the best metric types \u00a0for your data.  Understand how the parts of the SignalFx application work together to let you create and manage charts, by reading up on\u00a0 charts ,\u00a0 dashboards and dashboard groups , and the\u00a0 Catalog .  Set up\u00a0 detectors and alerts \u00a0on your most important metrics so that you can be notified if anything goes wrong.  Go deep on\u00a0 how the SignalFlow analytics engine works \u00a0and what\u00a0 functions \u00a0it makes available. Add\u00a0 metadata \u00a0to your metrics to get the most out of our visualization and analytics.  Dig into our best practices around\u00a0 how to monitor elastic infrastructure \u00a0like AWS, and come up with some of your own.",
+            "title": "Go deep on monitoring and analytics"
+        },
+        {
+            "location": "/quick-start-old/#become-an-active-member-of-our-community",
+            "text": "Got a story to share? Best practices that would benefit others on how to make the best use of analytics in monitoring?\u00a0 Get in touch with us    Contribute to our\u00a0 open source collector efforts on GitHub \u00a0and help others collect, aggregate and send the metrics and events they need. While you're there, check out the exciting proijects in our other repos.",
+            "title": "Become an active member of our community"
+        }
+    ]
+}

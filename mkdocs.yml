@@ -1,0 +1,6 @@
+site_name: Product Docs
+docs_dir: ProductDocs/docs
+pages:
+- Home: index.md
+- Metrics: why-metrics.md
+- Quick Start Old: quick-start-old.md

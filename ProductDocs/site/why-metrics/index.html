@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+
+	<title>Metrics - Product Docs</title>
+
+        <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../css/highlight.css">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="..">Product Docs</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="active">
+                        <a href="./">Metrics</a>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../quick-start-old/">Quick Start Old</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="..">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../quick-start-old/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#introduction">Introduction</a></li>
+        
+    
+        <li class="main "><a href="#what-is-a-metric">What is a metric?</a></li>
+        
+    
+        <li class="main "><a href="#common-examples-of-metrics">Common examples of metrics</a></li>
+        
+            <li><a href="#infrastructure-metrics-examples">Infrastructure metrics examples:</a></li>
+        
+            <li><a href="#application-metrics-examples">Application metrics examples:</a></li>
+        
+            <li><a href="#business-metrics-examples">Business metrics examples:</a></li>
+        
+    
+        <li class="main "><a href="#metrics-and-logs">Metrics and logs</a></li>
+        
+    
+        <li class="main "><a href="#why-are-metrics-useful">Why are metrics useful?</a></li>
+        
+            <li><a href="#visualization">Visualization</a></li>
+        
+            <li><a href="#analytics">Analytics</a></li>
+        
+            <li><a href="#alerting">Alerting</a></li>
+        
+    
+        <li class="main "><a href="#how-are-metrics-used-by-developers-or-operations-teams">How are metrics used by developers or operations teams?</a></li>
+        
+            <li><a href="#monitoring">Monitoring</a></li>
+        
+            <li><a href="#scaling">Scaling</a></li>
+        
+            <li><a href="#optimization">Optimization</a></li>
+        
+            <li><a href="#serving-business-needs">Serving business needs</a></li>
+        
+    
+        <li class="main "><a href="#when-should-i-use-metrics-when-should-i-use-logs">When should I use metrics? When should I use logs?</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<p>[view on live site](https://support.signalfx.com/hc/en-us/articles/204457925-Why-metrics-]</p>
+<p><strong>Links may not work</strong></p>
+<h1 id="introduction">Introduction</h1>
+<p>SignalFx is all about metrics - collecting, storing, visualizing, analyzing and alerting on them. If you're wondering why you should care, or just want to get a better feel for what they are - read on!</p>
+<p><strong>Original has a TOC to the headings in the document here, which I haven't recreated</strong></p>
+<h1 id="what-is-a-metric">What is a metric?</h1>
+<p>A metric is anything that is <em>measurable</em> (you can assign a numerical value to it) and <em>variable</em> (changes over time).</p>
+<p>For example, the current temperature or the price of a stock are examples of measurable things, as their numerical value changes over time. Things that have non-numerical values, such as a person's name, are not metrics because they cannot be measured. Likewise, numerical constants such as <em>pi</em> (3.1415….) or the speed of light are always the same, so they are not metrics either.</p>
+<h1 id="common-examples-of-metrics">Common examples of metrics</h1>
+<p>Many things can be represented as metrics. For the purposes of monitoring, we loosely categorize them as infrastructure, application or business metrics.</p>
+<h2 id="infrastructure-metrics-examples">Infrastructure metrics examples:</h2>
+<ul>
+<li>CPU% of a server</li>
+<li>number of bytes of free disk space</li>
+<li>number of bytes transmitted on a network interface</li>
+</ul>
+<h2 id="application-metrics-examples">Application metrics examples:</h2>
+<ul>
+<li>Response time in milliseconds of an API call</li>
+<li>Cache hit ratio of an internal cache used in a service</li>
+<li>% of time spent on garbage collection by a JVM instance</li>
+</ul>
+<h2 id="business-metrics-examples">Business metrics examples:</h2>
+<ul>
+<li>number of unique users who logged in over the last day</li>
+<li>number of new customers who signed up in the last hour</li>
+<li>Week over week percentage growth in revenue</li>
+</ul>
+<h1 id="metrics-and-logs">Metrics and logs</h1>
+<p>Logs are lists of actions or events that have occurred, and are commonly used by developers and operations teams for troubleshooting because of the ease with which detailed log data can be generated, and because it is often human-readable. In many cases, metrics are implicitly written into logs as part of an accounting of events.</p>
+<p>For example, you might have a log containing the stack trace every time an exception occurs in a Java application. If you extract the text that represents the occurrence of an exception, tally up the number of times you see it in the log and correlate that with timestamps correctly, then effectively you have recreated a metric representing the number of exceptions.</p>
+<p>In this sense, the log file can be thought of as a temporary container for the metric data, trading off detail and human readability (it's just text, after all) against efficiency of transport and ease of subsequent mathematical manipulation (as you would expect for numbers).</p>
+<h1 id="why-are-metrics-useful">Why are metrics useful?</h1>
+<p>By their very nature, metrics lend themselves to visualization, analytics and alerting.</p>
+<h2 id="visualization">Visualization</h2>
+<p>The human brain is particularly good at visual pattern analysis. A page full of time/value pairs may feel like a jumble, but if you plot them on a chart, you will instantly make sense of the data. Trends and outliers become apparent right away, as does proportionality.</p>
+<h2 id="analytics">Analytics</h2>
+<p>Calculating aggregations (e.g. percentiles over a large population), discovering trends (e.g. percentage rise in daily revenue compared to a month ago) and finding correlations (e.g. between growth in API calls and number of logged-in users on a website) are all examples of analytics for which metrics are well-suited.</p>
+<h2 id="alerting">Alerting</h2>
+<p>It is trivial to compare a metric against a threshold value and send out a notification when it crosses the threshold.</p>
+<h1 id="how-are-metrics-used-by-developers-or-operations-teams">How are metrics used by developers or operations teams?</h1>
+<p>Monitoring, scaling and optimization are three key use cases enabled by metrics. For any business with software competencies - and that is most companies, today - satisfying these use cases is also critical to the success of the business.</p>
+<h2 id="monitoring">Monitoring</h2>
+<p>In its simplest form, monitoring uses the visualization and alerting capabilities of metrics to let you manage individual instances or components, such as the CPU utilization % of a specific server. In an environment with greater complexity, monitoring is no longer just a visualization and alerting problem, but is now also an analytics problem. For example, in a service with tens or hundreds of nodes, it is inefficient and noisy to monitor the health of individual nodes, each of which can generate their own alerts.  It is far better to monitor the overall health of the service by calculating a single metric of overall service performance, and receiving a single alert when the service is performing below expected service levels.</p>
+<h2 id="scaling">Scaling</h2>
+<p>How much headroom does a node have? How much capacity should be added across the multiple tiers of a distributed application architecture - running on cloud infrastructure, of course - in order to support X more users of a service? While it's possible to build static models to plan for such changes, the reality is that the characteristics of the application components are changing constantly. As a result, static models become obsolete rapidly, and models that capture the dynamic nature of performance - in other words, metrics - are really the only way to accurately anticipate scaling requirements.</p>
+<h2 id="optimization">Optimization</h2>
+<p>Performance and cost optimization are among the top two or three focus areas of most engineering organizations. Comparison of performance metrics with their historical values helps measure the effectiveness of optimizations or identify performance regressions introduced by new code. With any reasonably complex system, instrumenting each component or service to capture important performance characteristics (e.g. latency of each stage) helps identify the longest poles and the best targets for engineering effort. Similarly, mapping out how costs will increase with scale can help identify and address top cost centers within a service.</p>
+<h2 id="serving-business-needs">Serving business needs</h2>
+<p>For any business with a software competency, all of the above reasons to use metrics apply not just to the developer community and the operations teams, but also to their business counterparts. 24/7 expectations on the part of customers mean that monitoring has to be up to snuff. Scale tends to correlate with revenue and user growth in most software businesses. Performance is not just a matter of engineering prioritization, but also critical to customer satisfaction and retention.</p>
+<h1 id="when-should-i-use-metrics-when-should-i-use-logs">When should I use metrics? When should I use logs?</h1>
+<p>While logs and metrics can be used in similar ways, they tend to have complementary strengths, leading many practitioners to use both.</p>
+<p>!https://support.signalfx.com/hc/en-us/article_attachments/201806159/table1.png!</p>
+<p>In fact, while SignalFx primarily handles metrics, it also supports <a href="https://support.signalfx.com/hc/en-us/articles/203758549#event">event</a> data natively in SignalFx.</p></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../js/jquery-1.10.2.min.js"></script>
+        <script src="../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../js/highlight.pack.js"></script>
+        <script>var base_url = '..';</script>
+        <script data-main="../mkdocs/js/search.js" src="../mkdocs/js/require.js"></script>
+        <script src="../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
