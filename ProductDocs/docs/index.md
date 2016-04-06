@@ -11,3 +11,4 @@ both the above lines are in recent builds at https://readthedocs.com/docs/signal
 
 Here is a change I am making on April 6 at 7:42 AM, to see if it gets pushed to either of the above sites
 
+Files in sidebar should now be basically empty after I commit the revised files.
